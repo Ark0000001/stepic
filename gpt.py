@@ -1,11 +1,15 @@
 import requests
 import json
+import os
 
-
+from dotenv import load_dotenv
+load_dotenv()
+tok=os.getenv('token_YA')
+fold=os.getenv('folder_id_YA')
 def gpt1(question, answer):
-    token = 't1.9euelZqRx8idy8KlYmUlo6Xz5jNm42PmMvl8_cKHFtW-e8tHnVl_t3z90pKWFb57y0edWX-zef1656VmseTjMnMyMnJxp7Lz8nLnY-c7_zF656VmseTjMnMyMnJxp7Lz8nLnY-c.Ra0f5IzDTmFgx0yKM7JAs4OcfGL5bx4xzKgvEqFqL9BCw7XZxW_ZlMUUYvnIu1TBrPGoxEdpzotAZLkxsE_YAw'
+    token = tok
 
-    folder_id = 'b1gn86cme9asj'
+    folder_id = fold
 
     headers = {
         'Authorization': f'Bearer {token}', 'x-folder-id': folder_id
