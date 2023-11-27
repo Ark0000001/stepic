@@ -1,8 +1,15 @@
 import requests
 
-token = 'y0_AgAAAABwWTgMAAoX4wAAAADudldZIfeB5XuWQEu12MctHvShSg0po7U'
+import os
 
-folder_id = 'b1gn86cknn9022me9asj'
+from dotenv import load_dotenv
+load_dotenv()
+tok=os.getenv('token_YA2')
+fold=os.getenv('folder_id_YA')
+
+token = tok
+
+folder_id = fold
 
 endpoint = 'https://300.ya.ru/api/sharing-url'
 response = requests.post(
@@ -10,7 +17,7 @@ response = requests.post(
     json = {
       'article_url': 'https://lenta.ru/news/2023/10/06/adam/'
     },
-    headers = {'Authorization': 'OAuth y0_AgAAAABwWTgMAAoX4wAAAADudldZIfeB5XuWQEu12MctHvShSg0po7U'}
+    headers = {'Authorization': f'OAuth {token}'}
 )
 if response.status_code == 200:
     print(response.json())
