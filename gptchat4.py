@@ -1,7 +1,7 @@
 import openai
 
-openai.api_key = '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'
-# organization='org-PKAZMf23yXZvOloR9Mepr2wt',
+openai.api_key = 'sk-jO2EShA63MI4H7qQ'
+# organization='org-P9Mepr2wt',
 client = openai.OpenAI(
   api_key=openai.api_key,
 )
